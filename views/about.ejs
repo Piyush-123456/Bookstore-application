@@ -1,0 +1,22 @@
+<%- include("partials/header")%>
+    <%- include("partials/nav")%>
+        <div class="container my-5">
+            <h2 class="text-center mb-4">About Us</h2>
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <p class="text-center">
+                        Welcome to our company! We are committed to providing the best services to our customers. Our
+                        team is dedicated to ensuring your satisfaction and we are always here to help you.
+                    </p>
+                    <form action="/send-mail" method="post" class="mt-4">
+                        <div class="form-group">
+                            <label for="email" class="sr-only mb-2">Email address</label>
+                            <input type="email" class="form-control mb-2"  placeholder="email@gmail.com"
+                                name="email" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block mb-2">Send Mail</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <%- include("partials/footer")%>

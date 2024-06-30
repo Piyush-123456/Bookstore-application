@@ -1,0 +1,59 @@
+<%- include("partials/header") %>
+    <%- include("partials/nav") %>
+
+        <div class="container mt-5">
+            <div class="row justify-content-center">
+                <div class="col-md-8 col-lg-6">
+                    <div class="card shadow-lg">
+                        <div class="card-body">
+                            <h1 class="card-title text-center mb-4">Create New Book</h1>
+                            <form action="/create-book" method="post" enctype="multipart/form-data">
+                                <div class="mb-3">
+                                    <label for="bookName" class="form-label">Book Name</label>
+                                    <input id="bookName" class="form-control" type="text" placeholder="Enter Book Name"
+                                        name="name">
+                                </div>
+                                <!-- <div class="mb-3">
+                                    <label for="posterUrl" class="form-label">Poster URL</label>
+                                    <input id="posterUrl" class="form-control" type="url" placeholder="Enter Poster URL"
+                                        name="posterurl" >
+                                </div> -->
+                                <div class="mb-3">
+                                    <label for="posterUrl" class="form-label">Poster </label>
+                                    <input id="posterUrl" class="form-control" type="file"
+                                        placeholder="Enter Poster URL" name="posterurl" required>
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="authorName" class="form-label">Author Name</label>
+                                    <input id="authorName" class="form-control" type="text"
+                                        placeholder="Enter Author Name" name="authorname" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="price" class="form-label">Price</label>
+                                    <input id="price" class="form-control" type="text" placeholder="Enter Price"
+                                        name="price">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="description" class="form-label">Description</label>
+                                    <textarea id="description" class="form-control" rows="3"
+                                        placeholder="Enter Description" name="description"></textarea>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="isbn" class="form-label">ISBN Number</label>
+                                    <input id="isbn" class="form-control" type="text" placeholder="Enter ISBN Number"
+                                        name="isbn">
+                                </div>
+                                <div class="text-center">
+                                    <button class="btn btn-success w-50" type="submit">
+                                        Add Book
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <%- include("partials/footer") %>

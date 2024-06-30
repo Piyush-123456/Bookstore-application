@@ -1,0 +1,45 @@
+<%- include("partials/header") %>
+    <%- include("partials/nav") %>
+
+        <div class="container mt-4">
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <div class="card shadow-lg">
+                        <div class="row g-0">
+                            <div class="col-md-5 d-flex align-items-center">
+                                <img src="/images/<%= user.posterurl%>" alt="Book Image"
+                                    class="img-fluid rounded-start w-100">
+                            </div>
+                            <div class="col-md-7">
+                                <div class="card-body">
+                                    <h1 class="card-title">
+                                        <%= user.name %>
+                                    </h1>
+                                    <h5 class="card-subtitle text-muted mb-3">
+                                        <%= user.authorname %>
+                                    </h5>
+                                    <p class="card-text mb-3">
+                                        <%= user.description %>
+                                    </p>
+                                    <h6 class="card-subtitle mb-3">Price: $<%= user.price %>
+                                    </h6>
+                                    <div class="d-flex justify-content-start">
+                                        <a href="/update-book/<%=user._id%>" class="btn btn-primary me-2">
+                                            Update
+                                        </a>
+                                        <button class="btn btn-danger">
+                                            <a class="text-decoration-none text-white"
+                                                href="/delete-book/<%=user._id%>">
+                                                Delete
+                                            </a>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <%- include("partials/footer") %>

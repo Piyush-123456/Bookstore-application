@@ -1,0 +1,28 @@
+<%- include("partials/header") %>
+    <%- include("partials/nav") %>
+        <div class="card-body d-flex align-items-center w-100 p-4">
+            <img class="w-50 p-4 ms-3" src="/images/<%= user.posterurl%>" alt="">
+            <form action="/update-book/<%=user._id%>" method="post" enctype="multipart/form-data" class="w-50 p-4">
+                <h1 class="ms-4 mt-5 ">Book Details</h1>
+                <input type="hidden" value="<%=user.posterurl%>" name="oldimage">
+                <input value="<%=user.name%>" class="form-control w-100 mt-4 ms-3" type="text" placeholder="Book Name"
+                    name="name">
+                <!-- <input value="<%=user.posterurl%>" class="form-control w-100 mt-4 ms-3" type="url"
+                    placeholder="Enter post URL" name="posterurl"> -->
+                <input value="<%=user.posterurl%>" class="form-control w-100 mt-4 ms-3" type="file"
+                    placeholder="Enter post URL" name="posterurl">
+                <input value="<%=user.authorname%>" class="form-control w-100 mt-4 ms-3" type="text"
+                    placeholder="Author Name" name="authorname">
+                <input value="<%=user.price%>" class="form-control w-100 mt-4 ms-3" type="text" placeholder="price"
+                    name="price">
+                <input value="<%=user.description%>" class="form-control w-100 mt-4 ms-3" type="text"
+                    placeholder="Description" name="description">
+                <input value="<%=user.isbn%>" class="form-control w-100 mt-4 ms-3" type="text" placeholder="ISBN Number"
+                    name="isbn">
+                <button class="btn btn-success mt-4 ms-3" type="submit">
+                    Update Book
+                </button>
+            </form>
+        </div>
+
+        <%- include("partials/footer")%>
